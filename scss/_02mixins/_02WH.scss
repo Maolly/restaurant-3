@@ -1,0 +1,12 @@
+@use '../_01variable/01Var' as V;
+
+@mixin W($WM){
+    width: V.$Ten * $WM;
+}
+@mixin H($HM){
+    height: V.$Ten * $HM;
+}
+@mixin WH($WM, $HM){
+    width: V.$Ten * $WM;
+    height: V.$Ten * $HM;
+}

@@ -1,0 +1,7 @@
+@mixin Images($Re, $Po, $Si, $Ti, $Fo, $Name){
+    background-repeat: $Re;
+    background-position: $Po;
+    background-size: $Si;
+    text-indent: $Ti;
+    background-image: url(../../images/#{$Fo}/#{$Name});
+}

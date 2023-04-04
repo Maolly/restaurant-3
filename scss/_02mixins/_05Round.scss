@@ -1,0 +1,7 @@
+@mixin RoundAll($Angle){
+    border-radius: $Angle;
+}
+//左上 右上 右下 左下(變數值順序)
+@mixin Round($LT, $RT, $RB, $LB){
+    border-radius: $LT $RT $RB $LB;
+}

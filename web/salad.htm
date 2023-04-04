@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!--宣告這是html的程式語言-->
+<html lang="zh-Hant-TW">
+  <!--網站的語言-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--響應式網頁的宣告-->
+    <link type="text/css" rel="stylesheet" href="../dist/style/styles.min.css">
+    <title>美食餐廳網 - 沙拉區</title>
+    <!--網頁名稱-->
+  </head>
+  <body>
+    <section id="rest1" class="restsa">
+      <header>
+        <!--項目清單ul/li
+        編號清單ol/li-->
+        <li id="menu" class="menu">美食餐廳網選單</li>
+        <h1><li><a href="../index.htm">吃吃餐廳</a></li></h1>
+      </header>
+      <nav id="PhoneMenu">
+        <ul id="menuheader">
+          <li id="close" class="clearfix"><a href="javascript:;">Ｘ</a></li>
+          <h1>吃吃餐廳網</h1>
+        </ul>
+        <ul id="menunav">
+          <h2 class="type">種類</h2>
+          <ul class="Items">
+            <li class="one">沙拉區</li>
+            <li class="two">湯品區</li>
+            <li class="three">炸物區</li>
+            <li class="four">主食區</li>
+            <li class="five">飲品區</li>
+            <li class="six">點心區</li>
+          </ul>
+          <h2 class="Conn">聯絡方式</h2>
+          <ul>
+            <li>聯絡表單</li>
+            <li>客服電話</li>
+            <li>加入line官方</li>
+          </ul>
+          <div class="NH"></div>
+        </ul>
+        <ul id="menuicon">
+          <!--hr 水平線-->
+          <!--<hr>-->
+          <li>line官方</li>
+          <li>fb粉絲頁</li>
+          <li>youtube影片</li>
+        </ul>
+      </nav>
+      <main id="Samain">
+        <section class="SImg">
+          <div id="webrest">
+            <ul>
+            <li class="I01">images1</li>
+            <li class="I02">images2</li>
+            <li class="I03">images3</li>
+            <li class="I04">images4</li>
+            <li class="I05"> images5</li>
+          </ul>
+          </div>
+          <article>
+            <li><a href="../index.htm">ㄑ查看其他種類</a></li>
+            <ul>
+              <li class="price">$90 / 1份</li>
+              <a href="javascript:;" class="btn">
+                <li>訂單表單</li>
+              </a>
+            </ul>
+          </article>
+        </section>
+        <section class="SText">
+          <h1>沙拉區</h1>
+          <table>
+            <tr>
+              <td colspan="4" class="title">環境</td>
+            </tr>
+            <tr>
+              <td colspan="4">內容物</td>
+            </tr>
+            <tr></tr>
+            <tr class="Nulltr"></tr>
+            <tr>
+              <td colspan="2" class="title">人數限制</td>
+              <td colspan="2" class="title">坪數</td>
+            </tr>
+            <tr>
+              <td colspan="2"><span>200</span>人</td>
+              <td colspan="2">5 &nbsp;&nbsp;&nbsp;&nbsp;平方公尺</td>
+            </tr>
+            <tr class="Nulltr"></tr>
+            <tr>
+              <td colspan="4" class="title">設施</td>
+            </tr>
+            <tr class="facility">
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+            </tr>
+          </table>
+
+          <div class="content">
+            <ul class="environment">
+              <li class="title">環境</li>
+              <li class="Text">內容物</li>
+            </ul>
+            <ul class="limit">
+              <li class="title">人數限制</li>
+              <li class="title">坪數</li>
+              <li class="Text">200人</li>
+              <li class="Text">5 平方公尺</li>
+            </ul>
+            <ul class="facility">
+              <li class="title">設施</li>
+              <ul class="Text">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+              </ul>
+            </ul>
+          </div>
+        </section>
+        <section id="restform">
+          <form action="" id="saform" name="saform">
+            <h1>預定點餐</h1>
+            <div class="UserName">
+              <label for="Name"><li>姓名</li></label>
+              <input type="text" name="Name" id="Name" maxlength="5" required placeholder="姓名">
+            </div>
+            <div class="TelNumber">
+              <label for="TelNumber"><li>電話</li></label>
+              <input type="tel" name="TelNumber" id="TelNumber" maxlength="10" required placeholder="例如：0912121212">
+            </div>
+            <div class="StartDate">
+              <label for="StartDate"><li>訂單日期</li></label>
+              <input type="date" name="StartDate" id="StartDate">
+            </div>
+            <div class="EndtDate">
+              <label for="EndDate"><li>送餐日期</li></label>
+              <input type="date" name="EndDate" id="EndDate">
+            </div>
+            <li class="Date"><input type="text" name="" id="" value="請選擇日期" readonly></li>
+            <div class="price">
+              <li>價格</li>
+              <li><input type="text" name="" id="" value="$0" readonly></li>
+            </div>
+              <li><input type="submit" value="確認送出" id="SubmitBtn"></li>
+            <li class="Text">此預約系統僅供預約功能，並不會對您進行收費</li>
+          </form>
+          <div class="content">
+            <a href="javascript:;">close</a>
+            <div class="Textcontent">說明</div>
+          </div>
+        </section>
+      </main>
+    </section>
+  </body>
+</html>

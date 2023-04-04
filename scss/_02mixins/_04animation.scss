@@ -1,0 +1,68 @@
+@mixin round {
+    //animation: round 25s linear/*(線性)*/ infinite/*(無限次)*/;
+    animation: round 25s linear infinite;
+    -webkit-animation: round 25s linear infinite;
+    @keyframes round {
+    //1.總張數5張 2.總秒數25秒 3.淡出淡入1秒 靜止4秒
+    //動畫總秒數為100%，計算1秒為多少百分比 100% / 25s = 4%，動畫計算為累加時間
+    //0-1秒 淡入
+    4%{
+        //圖片透明度；濾鏡透明度
+        //動畫格式預設值
+        opacity: 0.6;
+        filter: alpha(opacity=100);
+        -webkit-filter: alphe(opacity=100);
+    }
+    //1-5秒 靜止
+    20%{
+        opacity: 0.6;
+        filter: alpha(opacity=100);
+        -webkit-filter: alphe(opacity=100);
+    }
+    //5-6秒 淡出
+    24%{
+        opacity: 0;
+        filter: alpha(opacity=0);
+        -webkit-filter: alphe(opacity=0);
+    }
+    }
+    @-webkit-keyframes round{
+        4%{
+            //圖片透明度；濾鏡透明度
+            //動畫格式預設值
+            opacity: 0.6;
+            filter: alpha(opacity=100);
+            -webkit-filter: alphe(opacity=100);
+        }
+        //1-5秒 靜止
+        20%{
+            opacity: 0.6;
+            filter: alpha(opacity=100);
+            -webkit-filter: alphe(opacity=100);
+        }
+        //5-6秒 淡出
+        24%{
+            opacity: 0;
+            filter: alpha(opacity=0);
+            -webkit-filter: alphe(opacity=0);
+        }
+    }
+}
+@mixin delay{
+    //動畫物件，選取第n個子物件
+    li:nth-child(5){
+        animation-delay: 0s;
+    }
+    li:nth-child(4){
+        animation-delay: 5s;
+    }
+    li:nth-child(3){
+        animation-delay: 10s;
+    }
+    li:nth-child(2){
+        animation-delay: 15s;
+    }
+    li:nth-child(1){
+        animation-delay: 20s;
+    }
+}

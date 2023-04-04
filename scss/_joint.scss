@@ -1,0 +1,21 @@
+//共用檔
+@use '_01variable/01Var' as V;
+* {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+html, body{
+    height: V.$Ten * 10%;
+    width: V.$Ten * 10%;
+    font-family: Arial, Helvetica, sans-serif, '微軟正黑體';
+    
+}
+img{
+    width: V.$Ten * 10%;
+    height: auto;
+}
+a{
+    color: white;
+    text-decoration: none;
+}

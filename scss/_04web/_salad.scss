@@ -1,0 +1,82 @@
+@use '../_01variable/01Var' as V;
+@use '../_02mixins/01media' as M;
+@use '../_02mixins/02WH' as WH;
+@use '../_02mixins/03images' as I;
+@use '../_02mixins/04animation' as A;
+@use '../_02mixins/05Round' as R;
+
+@include M.Rwd(xs){
+    %XSWH{
+        @include WH.WH(10%, 10%);
+    }
+    #rest1{
+        #Samain{
+            @extend %XSWH;
+            .SImg{
+                @extend %XSWH;
+                position: relative;
+
+                #webrest{
+                    @extend %XSWH;
+
+                    ul{
+                        @extend %XSWH;
+                        position: relative;
+
+                        li{
+                            @extend %XSWH;
+                            position: absolute;
+                            opacity: 0;
+                            filter: alpha(opacity=0);
+                            -webkit-filter: alphe(opacity=0);
+                            @include A.round;
+                        }
+                        .I01{
+                            @include I.Images(no-repeat, center, cover, 0, photo, "001.jpeg");
+                        }
+                        .I02{
+                            @include I.Images(no-repeat, center, cover, 0, photo, "002.jpeg");
+                        }
+                        .I03{
+                            @include I.Images(no-repeat, center, cover, 0, photo, "003.jpeg");
+                        }
+                        .I04{
+                            @include I.Images(no-repeat, center, cover, 0, photo, "004.jpg");
+                        }
+                        .I05{
+                            @include I.Images(no-repeat, center, cover, 0, photo, "005.jpeg");
+                        }
+                        @include A.delay;
+                    }
+                }
+                article{
+                    @extend %XSWH;
+                    position: absolute;
+                    z-index: V.$InMainZindex;
+                    top: 0;
+
+                    $HeaderH: 6px;
+                    > li{
+                        @include WH.H(calc($HeaderH + 8px));
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+                        font-size: 1rem * 1.2;
+                    }
+                    ul{
+                        $w: 4%;
+                        @include WH.W($w);
+                        position: absolute;
+                        bottom: 80px;
+                        margin-left: calc(( 100% - $w * 10 ) / 2);
+                        //background-color: aqua;
+                        text-align: center;
+                        color: rgb(21, 38, 38);
+                        font-size: 1rem * 1.5;
+                    }
+                }
+            }
+            
+        }
+    }
+}

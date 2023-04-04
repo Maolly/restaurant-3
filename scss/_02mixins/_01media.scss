@@ -1,0 +1,34 @@
+@use '../_01variable/01Var' as V;
+@mixin Rwd($width){
+    @if $width == xs{
+        @media screen and (min-width: V.$xs) {
+            @content;
+        }
+    }
+    @else if $width == sm{
+        @media screen and (min-width: V.$sm) {
+            @content;
+        }
+    }
+    @else if $width == md{
+        @media screen and (min-width: V.$md) {
+            @content;
+        }
+    }
+    @else if $width == lg{
+        @media screen and (min-width: V.$lg) {
+            @content;
+        }
+    }
+    @else if $width == xl{
+        @media screen and (min-width: V.$xl) {
+            @content;
+        }
+    }
+    @else if $width == xxl{
+        @media screen and (min-width: V.$xxl) {
+            @content;
+        }
+    }
+}
+

@@ -1,0 +1,338 @@
+@use '../_01variable/01Var' as V;
+@use '../_02mixins/01media' as M;
+@use '../_02mixins/02WH' as WH;
+@use '../_02mixins/03images' as I;
+@use '../_02mixins/04animation' as A;
+@use '../_02mixins/05Round' as R;
+
+//vw 寬度單位，不要與 % 共用：1.自動展開高度，父框架不需要給值 2.有百分比特性
+//vh 高度單位，不要與 % 共用：自動展開高度，父框架不需要給值
+@include M.Rwd(xs){
+    //繼承功能不能寫在 media 判斷之外
+    %XSWH{
+        @include WH.WH(10%, 10%);
+    }
+    #rest1{
+        @extend %XSWH;
+        position: relative;
+        //background-color: aqua;
+        #resta{
+            @extend %XSWH;
+            display: block;
+            //background-color: rgb(145, 101, 44);
+            position: relative;
+            position: fixed;
+
+            ul{
+                @extend %XSWH;
+                position: relative;
+
+                li{
+                    @extend %XSWH;
+                    position: absolute;
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                    -webkit-filter: alphe(opacity=0);
+                    @include A.round;
+
+                    span{
+                        @extend %XSWH;
+                    }
+                }
+                .Images1{
+                    @include I.Images(no-repeat, center, cover, 0, photo, "001.jpeg");
+                }
+                .Images2{
+                    @include I.Images(no-repeat, center, cover, 0, photo, "002.jpeg");
+                }
+                .Images3{
+                    @include I.Images(no-repeat, center, cover, 0, photo, "003.jpeg");
+                }
+                .Images4{
+                    @include I.Images(no-repeat, center, cover, 0, photo, "004.jpg");
+                }
+                .Images5{
+                    @include I.Images(no-repeat, center, cover, 0, photo, "005.jpeg");
+                }
+            }
+            @include A.delay;
+        }
+    }
+
+    $HeaderH: 6px;
+    header{
+        @include WH.WH(10%, $HeaderH);
+        position: absolute;
+        top: 0;
+        z-index: V.$HeaderZindex;
+        position: fixed;
+        background-color: V.$BlueColor;
+        display: flex;
+
+        $MenuW: 13%;
+        .menu{
+            @include WH.WH($MenuW, 10%);
+            @include I.Images(no-repeat, center, contain, -9999px, icons, "list.svg");
+            //background-color: aquamarine
+        }
+        h1{
+            @include WH.WH(calc( 100% - $MenuW), 10%);
+            //background-color: beige;
+
+            li{
+                @include WH.H(10%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            a{
+                @include WH.H(10%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            }
+        }
+
+        .ConnBox{
+            display: none;
+        }
+    }
+
+    #PhoneMenu{
+        @extend %XSWH;
+        position: absolute;
+        position: fixed;
+        z-index: V.$PMZindex;
+        background-color: rgb(54, 53, 53);
+        color: rgb(228, 215, 170);
+        display: none;
+
+        $PH: 1%;
+        #menuheader{
+            @include WH.H(1.3%);
+            background-color: rgb(68, 126, 132);
+
+            li{
+                @include WH.WH(3.5px, 3.5px);
+                text-align: center;
+                //background-color: antiquewhite;
+                margin-right: 0;
+
+                a{
+                    padding: 0 5px;
+                    font-size: 1rem * 1.5;
+                    display: inline-block;
+                }
+            }
+            h1{
+                text-align: center;
+                font-size: 1rem * 1.6;
+
+                a{
+                    padding: auto;
+                    //background-color: antiquewhite;
+                }
+            }
+        }
+        #menunav{
+            @include WH.H(8%);
+            @include WH.W(8.5%);
+            overflow-y: auto;
+            //background-color: burlywood;
+
+            h2{
+                padding: 10px 0px;
+                border-bottom: solid 1px white;
+                //background-color: cadetblue;
+            }
+            ul{
+                @include WH.W(8.5%);
+                margin-top: 20px;
+
+                li{
+                    font-size: 1rem * 1.2;
+                    padding: 5px;
+                }
+            }
+        }
+        #menuicon{
+            @include WH.WH(9%, 0.5%);
+            border-top: solid 1px wheat;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            //background-color: aqua;
+
+
+        }
+
+    }
+
+    #main{
+        $H: 11px;
+        @extend %XSWH;
+        margin-top: calc( $HeaderH * 10 + 10px);
+        position: absolute;
+        z-index: V.$InMainZindex;
+        color: rgb(35, 62, 63);
+
+        nav{
+            @include WH.W(9%);
+
+            #Timerest{
+                @include WH.W(9%);
+                font-size: 1rem * 1.4;
+                color: white;
+                padding: 5px;
+                text-align: center;
+                background-color: chocolate;
+            }
+
+            li{
+                @include WH.WH(10% , 15px);
+                //background-color: aquamarine;
+                margin: {
+                    top: 15px;
+                    bottom: 15px;
+                };
+                @include R.RoundAll(15px);
+
+                a{
+                    @include WH.WH(10% , 15px);
+                    display: flex;
+                    align-items: flex-end;
+                    //background-color: brown;
+                    font-size: 1rem * 1.5;
+
+                    span{
+                        @include WH.W(9px);
+                        background-color: rgba(131, 125, 117, 0.7);
+                        @include R.RoundAll(15px);
+                        text-align: center;
+                    }
+                }
+            }
+            .one{
+                @include I.Images(no-repeat, center, contain, 0, butn, "01.png")
+            }
+        }
+
+        .Null{
+            @include WH.WH(10%, $H);
+        }
+
+        footer{
+            @include WH.WH(10%, $H);
+            background-color: V.$BlueColor;
+            font-size: 1rem * 0.9;
+            text-align: center;
+            position: absolute;
+            z-index: V.$HeaderZindex;
+            bottom: 0;
+            position: fixed;
+
+            .mt{
+                font-size: 1rem * 0.5;
+                text-align: right;
+                margin: 2px;
+            }
+        }
+    }
+
+    
+}
+@include M.Rwd(md){}
+@include M.Rwd(lg){
+    #rest1{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        header{
+            width: calc( 100% / 3);
+            height: 100%;
+            //定位點：預設值(靜態定位)，「不會被特別定位」在頁面上特別位置，而是照著瀏覽器預設的配置自動排版在頁面上
+            //position: static;
+            z-index: 0;
+            flex-wrap: wrap;
+            background-color: transparent;
+            //background-color: aliceblue;
+            .menu{
+                display: none;
+            }
+            h1{
+                width: 100%;
+                height: calc( 100% - 15%);
+                font-size: 2rem;
+                //background-color: antiquewhite;
+                
+                li{
+                    @include WH.H(2.5%);
+                    display: flex;
+                    align-items: flex-start;
+
+                    a{
+                        @include WH.H(2.5%);
+                        display: flex;
+                        align-items: flex-start;
+                        //background-color: aquamarine;
+                    }
+                }
+            }
+            .ConnBox{
+                width: 85%;
+                height: 15%;
+                display: block;
+                font-size: 1.3rem;
+                color: rgb(21, 38, 38);
+            }
+        }
+        #main{
+            width: calc( 100% / 3 * 2);
+            height: 100%;
+            margin-top: 0;
+            right: 0;
+            z-index: 0;
+            
+            nav{
+                @include WH.WH(9%, 8.5%);
+                display: flex;
+                flex-wrap: wrap;
+                //background-color: aqua;
+                
+                li{
+                    @include WH.W( calc( 9% / 3 ));
+                    margin: {
+                        top: 15px;
+                        bottom: 15px;
+                    };
+                    //background-color: azure;
+                }
+            }
+
+            .Null{
+                display: none;
+            }
+
+            footer{
+                @include WH.WH(9%, 1.3%);
+                background-color: transparent;
+                position: static;
+                z-index: 0;
+                //background-color: rgb(24, 62, 62);
+
+                .ConnBox{
+                    display: none;
+                }
+                ul{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    margin-right: 5px;
+                    //background-color: rgb(67, 45, 18);
+                }
+                
+            }
+        }
+    }
+}

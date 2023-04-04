@@ -1,0 +1,38 @@
+控制台 Console
+瀏覽器的控制台，是用來測試javascript程式執行的結果
+Console 的 API(串接系統)
+1. 邏輯判斷式 assert(邏輯判斷式,錯誤訊息)
+    結果只有真(True)跟假(false)，只會呈現錯誤的訊息
+
+2. error(錯誤訊息)
+    系統自帶
+
+3. warn(警告訊息)
+    可以自訂
+
+4. clear() 清除瀏覽器執行的所有 Console 資料
+    console.clear();
+
+5. count() 顯示呼叫次數
+
+6. group() 與 groupEnd() 開始分組 結束分組
+    console.log("Hi");
+    console.group("A組");
+    console.log("Hello");
+    console.log("這是A組的訊息");
+    console.groupEnd();
+    console.log("離開分組");
+
+7. time() 與 timeEnd 開始計時 結束計時(時間單位：毫秒[1000 ms])
+    console.time("執行100次後的時間");
+    for ( i=0; i<100; i++){
+        console.log("Hi");
+    }
+    console.timeEnd("執行100次後的時間");
+
+8. 取得文件裡的物件或物件集合的方法
+    8-1 getElementById(取得物件id)
+    8-2 getElementsByClassName(取得物件類別名稱) 元件設定的class屬性
+    8-3 getElementsByName(取得物件類別名稱) 元件設定的name屬性，例如：表單物件內的name
+    8-4 getElementsByTagName(取得物件標記的集合) 例如：h1、li、ul
+    8-5 querySelector(取得符合特定選擇器的物件) 例如：#IdName、.ClassName
