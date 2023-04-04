@@ -266,14 +266,18 @@ a {
     text-align: center;
     background-color: chocolate;
   }
-  #main nav li {
+  #main nav ul {
+    width: 100%;
+    height: 90%;
+  }
+  #main nav ul li {
     width: 100%;
     height: 150px;
     margin-top: 15px;
     margin-bottom: 15px;
     border-radius: 15px;
   }
-  #main nav li a {
+  #main nav ul li a {
     width: 100%;
     height: 150px;
     display: -webkit-box;
@@ -284,7 +288,7 @@ a {
             align-items: flex-end;
     font-size: 1.5rem;
   }
-  #main nav li a span {
+  #main nav ul li a span {
     width: 90px;
     background-color: rgba(131, 125, 117, 0.7);
     border-radius: 15px;
@@ -377,13 +381,25 @@ a {
   #rest1 #main nav {
     width: 90%;
     height: 85%;
+  }
+  #rest1 #main nav #Timerest {
+    width: 90%;
+    font-size: 1.4rem;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    background-color: chocolate;
+  }
+  #rest1 #main nav ul {
+    width: 100%;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  #rest1 #main nav li {
+  #rest1 #main nav ul li {
     width: 30%;
     margin-top: 15px;
     margin-bottom: 15px;

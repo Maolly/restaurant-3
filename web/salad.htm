@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--響應式網頁的宣告-->
+    <meta http-equiv="refresh" content="60">
     <link type="text/css" rel="stylesheet" href="../dist/style/styles.min.css">
     <title>美食餐廳網 - 沙拉區</title>
     <!--網頁名稱-->
@@ -16,24 +17,17 @@
       <header>
         <!--項目清單ul/li
         編號清單ol/li-->
-        <li id="menu" class="menu">美食餐廳網選單</li>
+        <li id="menu" class="menu" onclick="Menu()">美食餐廳網選單</li>
         <h1><li><a href="../index.htm">吃吃餐廳</a></li></h1>
       </header>
       <nav id="PhoneMenu">
         <ul id="menuheader">
-          <li id="close" class="clearfix"><a href="javascript:;">Ｘ</a></li>
+          <li id="close" class="clearfix" onclick="PhoneMenu()"><a href="javascript:;">Ｘ</a></li>
           <h1>吃吃餐廳網</h1>
         </ul>
         <ul id="menunav">
           <h2 class="type">種類</h2>
-          <ul class="Items">
-            <li class="one">沙拉區</li>
-            <li class="two">湯品區</li>
-            <li class="three">炸物區</li>
-            <li class="four">主食區</li>
-            <li class="five">飲品區</li>
-            <li class="six">點心區</li>
-          </ul>
+          <ul class="Items"  id="Items"></ul>
           <h2 class="Conn">聯絡方式</h2>
           <ul>
             <li>聯絡表單</li>
@@ -158,5 +152,6 @@
         </section>
       </main>
     </section>
+    <script src="script/index.js?20230403"></script>
   </body>
 </html>

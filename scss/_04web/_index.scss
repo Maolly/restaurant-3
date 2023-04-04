@@ -189,6 +189,8 @@
                 background-color: chocolate;
             }
 
+            ul{
+                @include WH.WH(10%, 9%);
             li{
                 @include WH.WH(10% , 15px);
                 //background-color: aquamarine;
@@ -213,6 +215,7 @@
                     }
                 }
             }
+        }
             .one{
                 @include I.Images(no-repeat, center, contain, 0, butn, "01.png")
             }
@@ -296,19 +299,32 @@
             
             nav{
                 @include WH.WH(9%, 8.5%);
-                display: flex;
-                flex-wrap: wrap;
                 //background-color: aqua;
                 
-                li{
-                    @include WH.W( calc( 9% / 3 ));
-                    margin: {
-                        top: 15px;
-                        bottom: 15px;
-                    };
-                    //background-color: azure;
+                #Timerest{
+                    @include WH.W(9%);
+                    font-size: 1rem * 1.4;
+                    color: white;
+                    padding: 5px;
+                    text-align: center;
+                    background-color: chocolate;
                 }
+                
+                ul{
+                    @include WH.WH(10%, 10%);
+                    display: flex;
+                    flex-wrap: wrap;
+                    //background-color: aqua;
+                    li{
+                        @include WH.W( calc( 9% / 3 ));
+                        margin: {
+                            top: 15px;
+                            bottom: 15px;
+                        };
+                        //background-color: azure;
+                    }
             }
+        }
 
             .Null{
                 display: none;

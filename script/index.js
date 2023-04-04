@@ -88,8 +88,36 @@ function ConnBox() {
         let li = document.createElement("li");
         li.textContent = Name[i];
         li.setAttribute("class", ClassName[i]);
-        document.querySelector("header > .ConnBox").appendChild(li);
         document.querySelector("footer > .ConnBox").appendChild(li);
     }
 }
 ConnBox();
+
+//選單內容
+function ItemsContent() {
+    let ItemsContent = ["沙拉區", "湯品區", "炸物區", "主食區", "飲品區", "點心區"];
+    let ClassName = ["one", "two", "three", "four", "five", "six"];
+    let Href = ["web/salad.htm", "javascript:;", "javascript:;", "javascript:;", "javascript:;", "javascript:;"]
+    for(i=0; i<ItemsContent.length; i++) {
+        //宣告Items變數，初始化指向類別Items
+        let Items = document.querySelector("nav > .Items");
+        
+        //宣告變數，建立新標籤 li a span
+        let li = document.createElement("li");
+        let a = document.createElement("a");
+        let span = document.createElement("span");
+
+        //給予屬性 li 與 a
+        li.setAttribute("class", ClassName[i]);
+        a.setAttribute("href", Href[i]);
+
+        //建立實體標籤與屬性
+        Items.appendChild(li);
+        li.appendChild(a);
+        a.appendChild(span);
+
+        //置入文字
+        span.textContent = ItemsContent[i];
+    }
+}
+ItemsContent();

@@ -80,6 +80,56 @@ if(cx <= 2){
 }
 document.getElementById("content3").innerHTML = "由Javascript呈現文字";
 document.getElementById("content3").style.color = dx;
+/*
+        4-4 switch...case 敘述
+            switch(變數或是運算式的值) {
+                case value1:
+                    程式敘述;
+                    break;
+                case value2:
+                    程式敘述;
+                    break;
+                case value3:
+                    程式敘述;
+                    break;
+                .
+                .
+                .
+                default:(可以省略)
+                    程式敘述;
+            }
+*/
+{
+    //switch...case 判斷今天星期幾
+    let day;
+    let Text;
+    let Days = new Date().getDay();
+    switch(Days) {
+        case 0:
+            day = "星期日";
+            break;
+        case 1:
+            day = "星期一";
+            break;
+        case 2:
+            day = "星期二";
+            break;
+        case 3:
+            day = "星期三";
+            Text = "7折";
+            break;
+        case 4:
+            day = "星期四";
+            break;
+        case 5:
+            day = "星期五";
+            break;
+        case 6:
+            day = "星期六";
+            break;
+    }
+    console.log("今天是" + day + "，全館" + Text);
+}
 
 /*
     5. 自訂函數 function yourname(){}
