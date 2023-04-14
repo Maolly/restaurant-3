@@ -66,10 +66,10 @@ function MenuItems() {
     let ClassName = ["one", "two", "three", "four", "five", "six"];
     for(i=0; i<Items.length; i++){
         let li = document.createElement("li");//新增li標籤
-        li.textContent = Items[i];//將Items[i]塞給li的內容裡面
         li.setAttribute("class", ClassName[i]);
         document.getElementById("Items").appendChild(li);
         document.getElementById("Items").style.listStyleType = "none";
+        li.textContent = Items[i];//將Items[i]塞給li的內容裡面
     }
 }
 MenuItems();
