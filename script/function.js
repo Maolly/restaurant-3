@@ -5,7 +5,7 @@ export function Menu(){
         document.getElementById("PhoneMenu").style.display = "block";
     }
 }
-export function PhoneMenu(){
+export function CloseMenu(){
     //關閉手機版 PhoneMenu
     let close = document.getElementById("close");
     close.onclick = function(){
@@ -73,9 +73,9 @@ export function MenuItems() {
     for(let i = 0; i <Items.length; i++ ){
         let li = document.createElement("li");//新增li標籤
         li.setAttribute("class", ClassName[i]);
+        document.querySelector("#menunav > .Items").appendChild(li);
+        document.querySelector("#menunav > .Items").style.listStyleType = "none";
         li.textContent = Items[i];//將Items[i]塞給li的內容裡面
-        document.getElementById("Items").appendChild(li);
-        document.getElementById("Items").style.listStyleType = "none";
     }
 }
 // MenuItems();
@@ -127,3 +127,31 @@ export function ItemsContent() {
     }
 }
 //ItemsContent();
+
+//選單內容
+export function Items($Path) {
+    let ItemsContent = ["沙拉區", "湯品區", "炸物區", "主食區", "飲品區", "點心區"];
+    let ClassName = ["one", "two", "three", "four", "five", "six"];
+    let Href = ["web/salad.htm", "javascript:;", "javascript:;", "javascript:;", "javascript:;", "javascript:;"]
+    for(let i = 0; i < ItemsContent.length; i++ ) {
+        //宣告Items變數，初始化指向類別Items
+        let Items = document.querySelector($Path);
+        
+        //宣告變數，建立新標籤 li a span
+        let li = document.createElement("li");
+        let a = document.createElement("a");
+        let span = document.createElement("span");
+
+        //給予屬性 li 與 a
+        li.setAttribute("class", ClassName[i]);
+        a.setAttribute("href", Href[i]);
+
+        //建立實體標籤與屬性
+        Items.appendChild(li);
+        li.appendChild(a);
+        a.appendChild(span);
+
+        //置入文字
+        span.textContent = ItemsContent[i];
+    }
+}
