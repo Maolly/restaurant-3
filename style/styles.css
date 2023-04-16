@@ -301,6 +301,41 @@ a {
     text-indent: 0;
     background-image: url(../../images/butn/01.png);
   }
+  #main nav .two {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-indent: 0;
+    background-image: url(../../images/butn/02.png);
+  }
+  #main nav .three {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-indent: 0;
+    background-image: url(../../images/butn/03.png);
+  }
+  #main nav .four {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-indent: 0;
+    background-image: url(../../images/butn/04.png);
+  }
+  #main nav .five {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-indent: 0;
+    background-image: url(../../images/butn/05.png);
+  }
+  #main nav .six {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-indent: 0;
+    background-image: url(../../images/butn/06.png);
+  }
   #main .Null {
     width: 100%;
     height: 110px;

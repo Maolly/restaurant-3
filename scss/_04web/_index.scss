@@ -219,6 +219,21 @@
             .one{
                 @include I.Images(no-repeat, center, contain, 0, butn, "01.png")
             }
+            .two{
+                @include I.Images(no-repeat, center, contain, 0, butn, "02.png")
+            }
+            .three{
+                @include I.Images(no-repeat, center, contain, 0, butn, "03.png")
+            }
+            .four{
+                @include I.Images(no-repeat, center, contain, 0, butn, "04.png")
+            }
+            .five{
+                @include I.Images(no-repeat, center, contain, 0, butn, "05.png")
+            }
+            .six{
+                @include I.Images(no-repeat, center, contain, 0, butn, "06.png")
+            }
         }
 
         .Null{
